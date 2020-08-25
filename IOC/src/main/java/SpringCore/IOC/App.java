@@ -11,7 +11,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext cntx=new ClassPathXmlApplicationContext("spring.xml");
+        @SuppressWarnings("resource")
+		ApplicationContext cntx=new ClassPathXmlApplicationContext("spring.xml");
         Phone p= (Phone)cntx.getBean("idpass");
         p.vodaphone();
         p.vodaphone();
